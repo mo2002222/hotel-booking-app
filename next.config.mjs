@@ -1,58 +1,15 @@
-// // /** @type {import('next').NextConfig} */
-// // const nextConfig = {
-// //   eslint: {
-// //     ignoreDuringBuilds: true,
-// //   },
-// //   output: 'export',         
-// //   basePath: '/hotel-booking-app',
-// //   assetPrefix: "/hotel-booking-app/",
-// //   typescript: {
-// //     ignoreBuildErrors: true,
-// //   },
-// //   images: {
-// //     unoptimized: true,
-// //   },
-// //   trailingSlash: true,
-// // }
-
-// // export default nextConfig
-
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   eslint: {
-//     ignoreDuringBuilds: true,
-//   },
-//   output: "export",
-//   basePath: "/hotel-booking-app",
-//   assetPrefix: "/hotel-booking-app/", 
-//   typescript: {
-//     ignoreBuildErrors: true,
-//   },
-//   images: {
-//     unoptimized: true,
-//   },
-//   trailingSlash: true, 
-// };
-
-// module.exports = nextConfig;
-
-
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   output: "export",
-  basePath: "/hotel-booking-app",
-  assetPrefix: "/hotel-booking-app/",
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
   trailingSlash: true,
+  basePath: isProd ? "/hotel-booking-app" : "",
+  assetPrefix: isProd ? "/hotel-booking-app/" : "",
+  images: { unoptimized: true },
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
 };
 
-export default nextConfig; // 
+export default nextConfig;
+
