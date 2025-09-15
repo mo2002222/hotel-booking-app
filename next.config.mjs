@@ -1,10 +1,50 @@
+// // /** @type {import('next').NextConfig} */
+// // const nextConfig = {
+// //   eslint: {
+// //     ignoreDuringBuilds: true,
+// //   },
+// //   output: 'export',         
+// //   basePath: '/hotel-booking-app',
+// //   assetPrefix: "/hotel-booking-app/",
+// //   typescript: {
+// //     ignoreBuildErrors: true,
+// //   },
+// //   images: {
+// //     unoptimized: true,
+// //   },
+// //   trailingSlash: true,
+// // }
+
+// // export default nextConfig
+
+
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   eslint: {
+//     ignoreDuringBuilds: true,
+//   },
+//   output: "export",
+//   basePath: "/hotel-booking-app",
+//   assetPrefix: "/hotel-booking-app/", 
+//   typescript: {
+//     ignoreBuildErrors: true,
+//   },
+//   images: {
+//     unoptimized: true,
+//   },
+//   trailingSlash: true, 
+// };
+
+// module.exports = nextConfig;
+
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'export',         
-  basePath: '/hotel-booking-app',
+  output: "export",
+  basePath: "/hotel-booking-app",
   assetPrefix: "/hotel-booking-app/",
   typescript: {
     ignoreBuildErrors: true,
@@ -13,6 +53,6 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-}
+};
 
-export default nextConfig
+export default nextConfig; // 
