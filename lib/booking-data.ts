@@ -17,8 +17,8 @@ export interface Booking {
 }
 
 export interface BookingFormData {
-  checkIn: string
-  checkOut: string
+  checkIn: Date
+  checkOut: Date
   guests: number
   firstName: string
   lastName: string
