@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "deploy": "npx gh-pages -d out",
-    "export" : "next export",
-    "build": "next build && next export"
+    "build": "next build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
