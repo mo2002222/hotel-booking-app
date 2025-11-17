@@ -41,7 +41,7 @@ export function DatePicker({ checkIn, checkOut, onCheckInChange, onCheckOutChang
         <div className="space-y-2">
           <Label>Check-in Date</Label>
           <Popover open={checkInOpen} onOpenChange={setCheckInOpen}>
-            <PopoverTrigger asChild>
+            <PopoverTrigger >
               <Button variant="outline" className="w-full justify-start text-left font-normal bg-transparent">
                 <CalendarIcon className="mr-2 h-4 w-4" />
                 {checkIn ? format(checkIn, "MMM dd, yyyy") : "Select date"}
@@ -63,8 +63,8 @@ export function DatePicker({ checkIn, checkOut, onCheckInChange, onCheckOutChang
         <div className="space-y-2">
           <Label>Check-out Date</Label>
           <Popover open={checkOutOpen} onOpenChange={setCheckOutOpen}>
-            <PopoverTrigger asChild>
-              <Button variant="outline" className="w-full justify-start text-left font-normal bg-transparent">
+            <PopoverTrigger >
+              <Button variant="outline" className="w-full justify-end text-left font-normal bg-transparent">
                 <CalendarIcon className="mr-2 h-4 w-4" />
                 {checkOut ? format(checkOut, "MMM dd, yyyy") : "Select date"}
               </Button>

@@ -55,7 +55,7 @@ export default function RoomsPage() {
 
       // Available only filter
       if (filters.availableOnly && !room.available) {
-        return false
+        return false;
       }
 
       return true

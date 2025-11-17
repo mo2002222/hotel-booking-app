@@ -12,6 +12,7 @@ import { useAuth } from "@/lib/auth-context"
 import { getBookingsByUser, type Booking } from "@/lib/booking-data"
 import { Calendar, User, Settings, CreditCard, Bell, Shield } from "lucide-react"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 export default function DashboardPage() {
   const { user } = useAuth()
@@ -159,7 +160,7 @@ export default function DashboardPage() {
                     <Calendar className="h-12 w-12 text-slate-400 mx-auto mb-4" />
                     <h3 className="text-lg font-medium text-slate-800 mb-2">No upcoming bookings</h3>
                     <p className="text-slate-600 mb-4">Ready to plan your next getaway?</p>
-                    <Button className="bg-blue-600 hover:bg-blue-700">Browse Rooms</Button>
+                    <Link href={`/rooms`} className="bg-blue-600 p-2 text-white rounded-md hover:bg-blue-700">Browse Rooms</Link>
                   </CardContent>
                 </Card>
               )}

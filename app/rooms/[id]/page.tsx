@@ -245,6 +245,7 @@
 import { rooms } from "@/lib/room-data"
 import { notFound } from "next/navigation"
 import RoomClient from "./RoomClient" 
+import RoomDetailPage from "@/app/book/[id]/BookClient"
 
 // ✅ Tell Next.js to statically generate all pages for each room ID
 export async function generateStaticParams() {
@@ -260,5 +261,5 @@ export default function RoomPage({ params }: { params: { id: string } }) {
     notFound()
   }
 
-  return <RoomClient room={room} />
+  return <RoomDetailPage room={room} />
 }

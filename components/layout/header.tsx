@@ -32,10 +32,10 @@ export function Header() {
               <Link href="/rooms" className="text-slate-600 hover:text-slate-800 font-medium">
                 Rooms
               </Link>
-              <a href="#" className="text-slate-600 hover:text-slate-800 font-medium">
+              <a href="/#amenities" className="text-slate-600 hover:text-slate-800 font-medium">
                 Amenities
               </a>
-              <a href="#" className="text-slate-600 hover:text-slate-800 font-medium">
+              <a href="/#contact" className="text-slate-600 hover:text-slate-800 font-medium">
                 Contact
               </a>
             </nav>
@@ -43,7 +43,7 @@ export function Header() {
             <div className="flex items-center gap-4">
               {user ? (
                 <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
+                  <DropdownMenuTrigger >
                     <Button variant="ghost" className="flex items-center gap-2">
                       <User className="h-4 w-4" />
                       <span className="hidden sm:inline">{user.name}</span>

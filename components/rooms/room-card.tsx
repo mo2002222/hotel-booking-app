@@ -44,8 +44,8 @@ export function RoomCard({ room }: RoomCardProps) {
         </div>
       </div>
 
-      <CardContent className="p-6">
-        <div className="flex justify-between items-start mb-3">
+      <CardContent className="p-3">
+        <div className="flex justify-between items-start whitespace-nowrap flex-col mb-3">
           <div>
             <h3 className="text-xl font-semibold text-slate-800 mb-1">{room.name}</h3>
             <p className="text-sm text-slate-600 capitalize">{room.type} Room</p>
@@ -58,7 +58,7 @@ export function RoomCard({ room }: RoomCardProps) {
         </div>
 
         {/* Room Details */}
-        <div className="flex items-center gap-4 text-sm text-slate-600 mb-4">
+        <div className="flex items-start gap-2 text-sm text-slate-600 mb-4 xl:flex-col">
           <div className="flex items-center gap-1">
             <Users className="h-4 w-4" />
             <span>{room.maxGuests} guests</span>
@@ -91,7 +91,7 @@ export function RoomCard({ room }: RoomCardProps) {
         <p className="text-sm text-slate-600 mb-4 line-clamp-2">{room.description}</p>
 
         {/* Price and Book Button */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-2 flex-col">
           <div>
             {room.originalPrice && (
               <span className="text-sm text-slate-500 line-through mr-2">${room.originalPrice}</span>
@@ -99,9 +99,9 @@ export function RoomCard({ room }: RoomCardProps) {
             <span className="text-2xl font-bold text-slate-800">${room.price}</span>
             <span className="text-slate-600">/night</span>
           </div>
-          <Button className="bg-blue-600 hover:bg-blue-700" disabled={!room.available}>
+          <Link href={`/rooms/${room.id}`} className="bg-blue-600 hover:bg-blue-700 p-2 text-white rounded-md text-sm font-medium">
             {room.available ? "Book Now" : "Unavailable"}
-          </Button>
+          </Link>
         </div>
       </CardContent>
     </Card>

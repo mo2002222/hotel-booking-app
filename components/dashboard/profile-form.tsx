@@ -37,7 +37,7 @@ export function ProfileForm() {
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
     setIsLoading(false)
-    // Show success message (could add toast notification here)
+    // Show success message 
   }
 
   const updateFormData = (field: string, value: string | boolean) => {
